@@ -1,54 +1,51 @@
-import { SwiperSlide, Swiper } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-cards";
-
-import { EffectCards } from "swiper/modules";
 import {
+  ArrowCircleUpRight,
+  ArrowRight,
   FacebookLogo,
   InstagramLogo,
   TiktokLogo,
   TwitterLogo,
-  UsersThree,
   WhatsappLogo,
 } from "@phosphor-icons/react";
 import { ReactNode } from "react";
 import RadialGradient from "../UI/RadialGradient";
-import imgAbout, { ImgAbout } from "../../services/ImgAbout";
+import TextAbout from "../SectionText/TextAbout";
 
 const SectionAbout = () => {
   return (
     <section
-      className="relative flex w-full bg-indigo-100/20 flex-col items-center gap-20 py-40"
+      className="relative flex w-full flex-col-reverse items-center justify-around gap-25 py-40 sm:flex-row sm:gap-0"
       id="about"
     >
-      <div className="flex items-center gap-4">
-        <span className="flex size-8 items-center justify-center rounded-sm bg-blue-200 p-0.5">
-          <UsersThree className="size-full rounded-sm bg-blue-400 p-0.5 text-white" />
-        </span>
-        <h2 className="text-3xl font-semibold text-slate-700">About US</h2>
-      </div>
-      <div className="flex flex-col items-center gap-20 sm:flex-row sm:gap-40">
-        <Swiper
-          grabCursor={true}
-          effect="cards"
-          modules={[EffectCards]}
-          className="h-70 w-60"
-        >
-          {imgAbout.map((img: ImgAbout) => (
-            <SwiperSlide className={img.styles}>
-              <img src={img.img} alt="" className="size-full object-cover" />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <div className="flex w-10/12 flex-col gap-5 sm:w-xl">
-          <h2 className="text-lg font-semibold">Coffe Shop Caffinity</h2>
-          <TextAbout />
+      <div className="flex w-10/12 flex-col gap-4 sm:w-xl">
+        <div className="flex flex-col gap-4">
+          <h3 className="ml-2 text-sm tracking-[0.2rem] uppercase">About US</h3>
+          <h2 className="font-outfit mb-8 text-5xl font-semibold tracking-wide text-slate-700">
+            Cerita di Balik Caffinity
+          </h2>
+        </div>
+        <TextAbout />
+        <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+          <button className="flex w-fit items-center gap-2 rounded-sm bg-slate-800 px-4 py-2.5 text-white shadow-sm">
+            <ArrowCircleUpRight size={25} />
+            Jelajahi Kopi Kami
+          </button>
+          <button
+            className={`relative flex w-fit items-center gap-2 rounded-sm px-4 py-2.5`}
+          >
+            Hubungi Kami
+            <ArrowRight size={20} />
+          </button>
         </div>
       </div>
-      <div className="absolute bottom-0 left-1/2 flex w-full -translate-1/2 flex-wrap justify-center gap-4 gap-y-4 sm:bottom-15 sm:w-2xl sm:gap-x-8">
-        <SocialMedia />
+      <div className="relative">
+        <div className="h-80 w-70 rounded-xl bg-slate-300 sm:h-90 sm:w-80"></div>
+        <div className="absolute top-1/2 -left-13 size-35 -translate-y-1/2 rounded-xl bg-slate-400 sm:-left-25 sm:size-40"></div>
+        <div className="mt-6 -mb-4 flex justify-between px-1">
+          <SocialMedia />
+        </div>
       </div>
-      <RadialGradient position="top-20 right-10" size="size-80" />
+      <RadialGradient position="top-50 sm:top-0 right-10" size="size-80" />
       <RadialGradient position="bottom-25 left-10" size="size-100" />
     </section>
   );
@@ -57,70 +54,26 @@ const SectionAbout = () => {
 const SocialMedia = () => {
   return (
     <>
-      <SocialMediaItem
-        name="caffinity_13"
-        icon={<InstagramLogo size={20} />}
-        link="#"
-      />
-      <SocialMediaItem
-        name="caffinity_13"
-        icon={<WhatsappLogo size={20} />}
-        link="#"
-      />
-      <SocialMediaItem
-        name="caffinity_13"
-        icon={<FacebookLogo size={20} />}
-        link="#"
-      />
-      <SocialMediaItem
-        name="caffinity_13"
-        icon={<TwitterLogo size={20} />}
-        link="#"
-      />
-      <SocialMediaItem
-        name="caffinity_13"
-        icon={<TiktokLogo size={20} />}
-        link="#"
-      />
+      <SocialMediaItem icon={<InstagramLogo size={23} />} link="#" />
+      <SocialMediaItem icon={<WhatsappLogo size={23} />} link="#" />
+      <SocialMediaItem icon={<FacebookLogo size={23} />} link="#" />
+      <SocialMediaItem icon={<TwitterLogo size={23} />} link="#" />
+      <SocialMediaItem icon={<TiktokLogo size={23} />} link="#" />
     </>
   );
 };
 
 type SocialMediaItemProps = {
-  name: string;
   icon: ReactNode;
   link?: string;
 };
 
 const SocialMediaItem = (props: SocialMediaItemProps) => {
-  const { name, icon, link } = props;
+  const { icon, link } = props;
   return (
-    <div className="flex w-fit items-center gap-2 rounded-sm bg-indigo-100/70 p-1.5 text-xs">
-      <span>{icon}</span>
-      <a href={link}>{name}</a>
+    <div className="w-fit items-center gap-2 rounded-md bg-slate-100/80 px-2.5 py-1.5 text-xs">
+      <a href={link}>{icon}</a>
     </div>
-  );
-};
-
-const TextAbout = () => {
-  return (
-    <>
-      <p>
-        Caffinity adalah tempat di mana kopi terbaik bertemu dengan
-        produktivitas. Kami hadir untuk menemani para developer, freelancer, dan
-        pekerja kreatif dengan suasana yang nyaman serta kopi berkualitas
-        tinggi.
-      </p>
-      <p>
-        Caffinity berasal dari kalimat 'Caffein' dan 'Affinity', menggambarkan
-        kecintaan kami terhadap kopi dan bagaimana kopi menyatukan komunitas.
-      </p>
-      <p>
-        Disini menyediakan menu kopi spesial dengan rasa unik,lalu terdapat
-        komunitas developer dan freelancer yang aktif,dan terkadang ada acara
-        coding, hackaton, atau diskusi seputar teknologi
-      </p>
-    </>
   );
 };
 

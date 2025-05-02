@@ -7,18 +7,23 @@ export type SlideProduct = {
 const slideProduct: SlideProduct[] = [
   {
     img: "/img/product_img/coffe-bag-5.png",
-    disconPrice: 788,
-    price: 500,
+    disconPrice: 15000,
+    price: 19000,
   },
   {
     img: "/img/product_img/coffe-bag-6.png",
-    disconPrice: 988,
-    price: 600,
+    disconPrice: 20000,
+    price: 22000,
   },
   {
-    img: "/img/product_img/coffe-bag-12.png",
-    disconPrice: 488,
-    price: 200,
+    img: "/img/product_img/coffe-bag.png",
+    disconPrice: 30000,
+    price: 35000,
+  },
+  {
+    img: "/img/product_img/coffe-bag-1.png",
+    disconPrice: 35000,
+    price: 38000,
   },
 ];
 

@@ -5,7 +5,7 @@ const Sidebar = () => {
     const clickedBtn = useClickedIcon()
   return (
     <aside
-      className={`${clickedBtn!.clickedIcon ? "right-0 opacity-100" : "opacity-0 -right-100"} fixed top-0 z-888 h-screen w-7/12 bg-white shadow-md transition-all duration-600 ease`}
+      className={`${clickedBtn!.clickedIcon ? "right-0 opacity-100" : "opacity-0 -right-full"} fixed top-0 z-888 h-screen w-7/12 bg-white shadow-md transition-all duration-600 ease`}
     >
       <ul className="mx-4 mt-30 flex flex-col gap-6">
         <NavigationItem link="#about" text="About" />
