@@ -14,11 +14,11 @@ const SectionHome = () => {
       id="home"
       className="relative flex min-h-screen w-full flex-col-reverse sm:flex-row"
     >
-      <div className="flex min-h-screen w-full flex-col items-center justify-center bg-slate-800 px-6 pt-10 pb-40 sm:w-7/12">
+      <div className="flex min-h-screen w-full flex-col items-center justify-end bg-slate-800 px-6 pt-10 pb-40 sm:w-7/12">
         <TextHome />
         <div className="mt-10 flex gap-6 self-start sm:ml-14 sm:gap-4">
           <PrimaryButton
-            text="Buy now!"
+            text="Beli Sekarang!"
             bgColor="bg-[#B17457]"
             link="#product"
             icon={<ArrowCircleUpRight size={25} />}

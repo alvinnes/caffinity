@@ -10,7 +10,7 @@ const SectionTestimonials = () => {
   return (
     <section
       id="testimonials"
-      className="flex w-full flex-col items-center gap-30 bg-slate-100/50 py-20"
+      className="flex w-full flex-col items-center gap-30 py-20"
     >
       <div className="w-11/12 text-center sm:w-xl">
         <SubTitle

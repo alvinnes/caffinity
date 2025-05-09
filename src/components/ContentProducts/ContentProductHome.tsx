@@ -23,7 +23,7 @@ const ContentProductHome = ({ product }: ContentProduct) => {
         <PriceProduct price={product.price} />
       </div>
       <PrimaryButton
-        text="Add to Cart"
+        text="Masukkan Keranjang"
         bgColor="bg-[#B17457] mb-13 mt-4 "
         link="#product"
         icon={<ShoppingCart size={20} />}

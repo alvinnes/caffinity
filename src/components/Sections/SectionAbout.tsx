@@ -10,6 +10,8 @@ import {
 import { ReactNode } from "react";
 import RadialGradient from "../UI/RadialGradient";
 import TextAbout from "../SectionText/TextAbout";
+import Title from "../UI/Title";
+import SubTitle from "../UI/SubTitle";
 
 const SectionAbout = () => {
   return (
@@ -19,10 +21,8 @@ const SectionAbout = () => {
     >
       <div className="flex w-10/12 flex-col gap-4 sm:w-xl">
         <div className="flex flex-col gap-4">
-          <h3 className="ml-2 text-sm tracking-[0.2rem] uppercase">About US</h3>
-          <h2 className="font-outfit mb-8 text-5xl font-semibold tracking-wide text-slate-700">
-            Cerita di Balik Caffinity
-          </h2>
+          <SubTitle text="Tentang kami" />
+          <Title text="Cerita di Balik Caffinity" />
         </div>
         <TextAbout />
         <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">

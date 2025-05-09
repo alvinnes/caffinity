@@ -20,7 +20,9 @@ const ContentProductMenu = (props: ContentProductMenuProps) => {
         </div>
         <div className="ml-4 w-75 sm:w-sm">
           <div className="flex items-center justify-between border-b-1 border-dashed border-slate-600 pb-1">
-            <h2 className="font-semibold text-amber-900">{item.nama}</h2>
+            <h2 className="text-left font-semibold text-nowrap text-amber-900">
+              {item.nama}
+            </h2>
             <p className="text-sm font-semibold text-amber-800">
               {formatPrice(item.price)}
             </p>

@@ -7,7 +7,7 @@ interface ContentTestimonialsProps {
 const ContentTestimonials = (props: ContentTestimonialsProps) => {
   const { testimoni } = props;
   return (
-    <div className="mx-auto flex h-75 w-80 flex-col justify-between rounded-md bg-slate-200 p-3 shadow-sm shadow-slate-500">
+    <div className="mx-auto flex h-75 w-80 flex-col justify-between rounded-md bg-slate-100 p-3 shadow-sm shadow-slate-300">
       <h2 className="text-2xl font-semibold text-slate-700">
         {testimoni.title}
       </h2>

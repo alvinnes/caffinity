@@ -4,6 +4,7 @@ import { ArrowCircleUpRight } from "@phosphor-icons/react";
 import PrimaryButton from "../UI/PrimaryButton";
 import ContentProductMenu from "../ContentProducts/ContentProductMenu";
 import SubTitle from "../UI/SubTitle";
+import Title from "../UI/Title";
 
 const SectionMenus = () => {
   const [product, _setProduct] = useState<ProductCoffe[]>(productCoffe);
@@ -15,16 +16,19 @@ const SectionMenus = () => {
       id="menus"
       className="flex w-full flex-col items-center bg-slate-100 py-20 text-center"
     >
-      <SubTitle text="Menu Kami" />
-      <h2 className="font-outfit mt-3 mb-6 w-11/12 text-5xl leading-13 font-semibold text-slate-700 sm:w-xl">
-        Apa yang Spesial dari Menu Kami ?
-      </h2>
-      <p className="mt-8 w-10/12 sm:w-xl">
-        Kami percaya bahwa kopi dan kudapan yang tepat bisa membuat proses kerja
-        lebih menyenangkan—itulah alasan setiap sajian kami dibuat dengan rasa,
-        energi, dan perhatian.
-      </p>
-      <div className="mt-15 grid w-11/12 grid-cols-1 place-content-center gap-x-6 gap-y-4 sm:w-10/12 sm:grid-cols-2 sm:place-items-center sm:px-8">
+      <div className="w-11/12 sm:w-xl">
+        <SubTitle
+          text="Menu Kami"
+          customStyle="before:left-1/2 before:-ml-23"
+        />
+        <Title text="Apa yang Spesial dari Menu Kami ?" />
+        <p className="mt-2 w-full">
+          Kami percaya bahwa kopi dan kudapan yang tepat bisa membuat proses
+          kerja lebih menyenangkan—itulah alasan setiap sajian kami dibuat
+          dengan rasa, energi, dan perhatian.
+        </p>
+      </div>
+      <div className="mt-20 grid w-11/12 grid-cols-1 place-content-center gap-x-6 gap-y-4 sm:w-10/12 sm:grid-cols-2 sm:place-items-center sm:px-8">
         {populerProduct.map((item: ProductCoffe) => (
           <ContentProductMenu item={item} />
         ))}

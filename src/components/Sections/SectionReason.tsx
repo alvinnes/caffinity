@@ -9,7 +9,7 @@ const SectionReason = () => {
   return (
     <section
       id="reservasi"
-      className={`${classBefore} relative flex flex-col items-center justify-around bg-slate-300 bg-[url(/img/bg-1.jpg)] bg-cover bg-center py-35 text-white sm:w-full sm:flex-row sm:items-start`}
+      className={`${classBefore} relative flex flex-col items-center justify-around bg-slate-300 bg-[url(/img/bg-1.jpg)] bg-cover bg-fixed bg-center py-35 text-white sm:w-full sm:flex-row sm:items-start`}
     >
       {/* <div className="flex w-full absolute z-8 justify-around"> */}
       <div className="relative z-4 flex w-11/12 flex-col gap-3 sm:w-sm">
