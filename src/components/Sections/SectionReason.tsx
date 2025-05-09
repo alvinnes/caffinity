@@ -8,7 +8,8 @@ const SectionReason = () => {
     "before:size-full before:absolute before:top-0 before:left-0 before:bg-linear-to-t before:from-black/80 before:via-black/50 before:to-black/10";
   return (
     <section
-      className={`${classBefore} relative flex flex-col items-center justify-around bg-slate-300 bg-[url(/img/bg-1.jpg)] bg-cover bg-center py-20 text-white sm:w-full sm:flex-row sm:items-start`}
+      id="reservasi"
+      className={`${classBefore} relative flex flex-col items-center justify-around bg-slate-300 bg-[url(/img/bg-1.jpg)] bg-cover bg-center py-35 text-white sm:w-full sm:flex-row sm:items-start`}
     >
       {/* <div className="flex w-full absolute z-8 justify-around"> */}
       <div className="relative z-4 flex w-11/12 flex-col gap-3 sm:w-sm">
@@ -37,7 +38,7 @@ const SectionReason = () => {
 
 const ButtonReservation = () => {
   return (
-    <div className="flex items-start sm:items-center gap-2 flex-col sm:flex-row">
+    <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center">
       <PrimaryButton
         text="Pesan Meja"
         link="#"

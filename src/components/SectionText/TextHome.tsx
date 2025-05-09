@@ -1,7 +1,7 @@
 const TextHome = () => {
   return (
     <div className="w-full sm:w-xl">
-      <h1 className="font-fair text-5xl font-extrabold text-white drop-shadow-sm sm:text-6xl">
+      <h1 className="font-fair text-4xl font-extrabold text-white drop-shadow-sm sm:text-6xl">
         Satu Cangkir untuk Menghidupkan {""}
         <span className="text-[#A67B5B]">Ribuan Baris Kode</span>
       </h1>
