@@ -25,7 +25,7 @@ const ContentProductMenu = (props: ContentProductMenuProps) => {
               {formatPrice(item.price)}
             </p>
           </div>
-          <p className="mt-1 line-clamp-2 text-[0.8em] font-light text-ellipsis">
+          <p className="mt-1 line-clamp-2 text-left text-[0.8em] font-light text-ellipsis">
             {item.description}
           </p>
         </div>

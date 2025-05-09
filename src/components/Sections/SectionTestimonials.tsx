@@ -26,6 +26,15 @@ const SectionTestimonials = () => {
         <Swiper
           className="h-90"
           slidesPerView={3}
+          breakpoints={{
+            360: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
           pagination={{ clickable: true, dynamicBullets: true }}
           grabCursor={true}
           watchSlidesProgress={true}

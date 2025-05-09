@@ -6,18 +6,17 @@ import ContentProductMenu from "../ContentProducts/ContentProductMenu";
 import SubTitle from "../UI/SubTitle";
 
 const SectionMenus = () => {
-  const [product, setProduct] = useState<ProductCoffe[]>(productCoffe);
+  const [product, _setProduct] = useState<ProductCoffe[]>(productCoffe);
   const populerProduct = product.filter(
     (item: ProductCoffe) => item.review > 1400,
   );
-  console.log(product);
   return (
     <section
       id="menus"
-      className="flex w-full flex-col items-center bg-indigo-100/30 py-20 text-center"
+      className="flex w-full flex-col items-center bg-slate-100 py-20 text-center"
     >
       <SubTitle text="Menu Kami" />
-      <h2 className="font-outfit mt-3 mb-6 w-11/12 text-5xl leading-13 font-semibold text-slate-700 sm:w-auto sm:w-xl">
+      <h2 className="font-outfit mt-3 mb-6 w-11/12 text-5xl leading-13 font-semibold text-slate-700 sm:w-xl">
         Apa yang Spesial dari Menu Kami ?
       </h2>
       <p className="mt-8 w-10/12 sm:w-xl">

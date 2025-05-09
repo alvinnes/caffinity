@@ -5,7 +5,7 @@ const SectionFeatures = () => {
   return (
     <section
       id="features"
-      className="flex w-full flex-col items-center gap-20 bg-slate-800 py-20 text-white"
+      className="flex w-full flex-col items-center gap-20 bg-slate-100 py-20 "
     >
       <div className="w-11/12 text-center sm:w-xl">
         <SubTitle
