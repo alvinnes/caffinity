@@ -20,7 +20,7 @@ interface RatingItemProps {
 const RatingItem = (props: RatingItemProps) => {
   const { rating, description, icon } = props;
   return (
-    <div className="sm-35 flex flex-col items-center justify-center gap-2 sm:size-45">
+    <div className=" flex flex-col items-center justify-center gap-2 sm:size-45">
       <h3 className="flex items-center gap-2 text-2xl font-bold text-slate-800 drop-shadow-sm sm:gap-4 sm:text-6xl">
         {icon}
         {rating}

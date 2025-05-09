@@ -1,4 +1,4 @@
-import { Heart, House, List, ShoppingCart, User } from "@phosphor-icons/react";
+import { Heart, List, ShoppingCart, User } from "@phosphor-icons/react";
 import useClickedIcon from "../hooks/useClickedIcon";
 import { useLocation } from "react-router";
 
@@ -9,11 +9,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-2 left-1/2 z-999 flex w-11/12 -translate-x-1/2 items-center justify-between rounded-md bg-white px-[3%] py-3 shadow-sm sm:w-10/12">
+    <nav className="fixed top-2 left-1/2 z-999 flex w-11/12 -translate-x-1/2 items-center justify-between rounded-md bg-white px-[3%] shadow-sm sm:w-10/12">
       <div className="flex items-center gap-8">
-        <div className="size-8 rounded-full bg-slate-100">
+        <div className="sm:h-20 h-15 w-25 sm:w-30">
           <a href="#home">
-            <House />
+            <img
+              src="/img/logo.png"
+              alt=""
+              className="size-full object-cover"
+            />
           </a>
         </div>
         <ul className="hidden gap-6 sm:flex">

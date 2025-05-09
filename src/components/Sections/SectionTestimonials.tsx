@@ -22,7 +22,7 @@ const SectionTestimonials = () => {
           Caffinity.
         </p>
       </div>
-      <div className="w-10/12">
+      <div className="w-11/12 sm:w-10/12">
         <Swiper
           className="h-90"
           slidesPerView={3}
@@ -66,7 +66,9 @@ const ContentTestimonials = (props: ContentTestimonialsProps) => {
         {testimoni.comment}
       </p>
       <div className="flex items-center justify-between">
-        <div className="size-12 rounded-full bg-white"></div>
+        <div className="size-12 rounded-full bg-white overflow-hidden">
+          <img src={testimoni.img} alt="" className="size-full object-cover"/>
+        </div>
         <p className="-ml-18 text-sm tracking-wide uppercase">
           {testimoni.name}
         </p>
