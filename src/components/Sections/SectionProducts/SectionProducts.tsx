@@ -59,7 +59,7 @@ const ContentProducts = (props: ContentProductsProps) => {
         />
       </div>
       <div className="flex h-30 flex-col justify-between p-2">
-        <h2 className="tracking-wide ml-1 text-slate-700">Coffe Latte</h2>
+        <h2 className="tracking-wide ml-1 text-slate-700">{product.nama}</h2>
         <h3 className="text-sm ml-1">{formatPrice(product.price)}</h3>
         <button className="w-full rounded-sm bg-slate-100 py-1.5">
           Beli Sekarang
