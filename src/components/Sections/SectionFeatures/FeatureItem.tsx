@@ -10,7 +10,7 @@ const FeatureItem = (props: FeatureItemProps) => {
   const { title, text, icon } = props;
   return (
     <div className="flex w-11/12 flex-col items-center justify-center gap-4 text-center sm:w-100">
-      {icon}
+      <span className="text-[#B17457]">{icon}</span>
       <h2 className="font-outfit text-2xl font-semibold sm:text-nowrap">
         {title}
       </h2>

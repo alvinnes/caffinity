@@ -18,9 +18,9 @@ const ContentProductMenu = (props: ContentProductMenuProps) => {
             className="size-full rounded-full bg-amber-400 object-cover"
           />
         </div>
-        <div className="ml-4 w-75 sm:w-sm">
+        <div className="ml-4 w-70 sm:w-sm">
           <div className="flex items-center justify-between border-b-1 border-dashed border-slate-600 pb-1">
-            <h2 className="text-left font-semibold text-nowrap text-amber-900">
+            <h2 className="w-42 overflow-hidden text-left font-semibold text-nowrap text-ellipsis text-amber-900">
               {item.nama}
             </h2>
             <p className="text-sm font-semibold text-amber-800">

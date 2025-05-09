@@ -3,7 +3,7 @@ import FeatureItem from "./FeatureItem";
 
 const Features = () => {
   return (
-    <div className="mt-10 flex w-11/12 flex-col items-center gap-20 sm:flex-row sm:items-start sm:justify-center">
+    <div className="mt-4 flex w-11/12 flex-col items-center gap-20 sm:flex-row sm:items-start sm:justify-center">
       <FeatureItem
         title="Wifi Cepat Tanpa Drama"
         text="Koneksi stabil untuk kerja, meeting, atau streaming sambil ngopi."

@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 const SectionRating = () => {
   return (
-    <section className="flex w-full justify-center gap-10 bg-slate-100/30 py-8 sm:gap-20">
+    <section className="flex w-full justify-center gap-10 bg-slate-100/30 py-14 sm:gap-20">
       <RatingItem rating="20+" description="Varian Kopi" icon={<Coffee />} />
       <RatingItem rating="25+" description="Penghargaan" icon={<Medal />} />
       <RatingItem rating="120K" description="Testimoni" icon={<UsersThree />} />

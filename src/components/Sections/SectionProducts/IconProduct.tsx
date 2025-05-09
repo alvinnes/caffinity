@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 const IconProduct = () => {
   return (
-    <div className="absolute top-1/2 flex w-full -translate-y-1/2 justify-center gap-4">
+    <div className="absolute top-1/2 flex w-full -translate-y-1/2 justify-center gap-2">
       <IconProductItem icon={<Heart size={23} weight="bold" />} />
       <IconProductItem icon={<Eye size={23} weight="bold" />} />
       <IconProductItem icon={<ShoppingCart size={23} weight="bold" />} />
