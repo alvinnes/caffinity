@@ -52,7 +52,7 @@ const NavigationItem = (props: NavigationItemProps) => {
   const activeNav = location.hash == link;
   return (
     <li
-      className={`${activeNav ? "text-[#B17457]" : "text-black"} hover:text-[#EAC696]`}
+      className={`${activeNav ? "text-[#E4CDA7]" : "text-black"} hover:text-[#E4CDA7] `}
     >
       <a href={link}>{text}</a>
     </li>

@@ -1,12 +1,13 @@
 import SubTitle from "../../UI/SubTitle";
 import Title from "../../UI/Title";
+import DecorationFeatures from "./DecorationFeatures";
 import Features from "./Features";
 
 const SectionFeatures = () => {
   return (
     <section
       id="features"
-      className="flex w-full flex-col items-center gap-20 bg-slate-100 py-20"
+      className="relative flex w-full flex-col items-center gap-20 bg-[#FFF0D1]/25 py-20"
     >
       <div className="w-11/12 text-center sm:w-xl">
         <SubTitle
@@ -20,6 +21,7 @@ const SectionFeatures = () => {
         </p>
       </div>
       <Features />
+      <DecorationFeatures />
     </section>
   );
 };

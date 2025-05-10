@@ -8,15 +8,15 @@ import {
   WhatsappLogo,
 } from "@phosphor-icons/react";
 import { ReactNode } from "react";
-import RadialGradient from "../UI/RadialGradient";
 import TextAbout from "../SectionText/TextAbout";
 import Title from "../UI/Title";
 import SubTitle from "../UI/SubTitle";
+import Decoration from "../UI/Decoration";
 
 const SectionAbout = () => {
   return (
     <section
-      className="relative flex w-full flex-col-reverse items-center justify-around gap-25 py-40 sm:flex-row sm:gap-0"
+      className="bg-secondary/25 relative flex w-full flex-col-reverse items-center justify-around gap-25 py-40 sm:flex-row sm:gap-0"
       id="about"
     >
       <div className="flex w-10/12 flex-col gap-4 sm:w-xl">
@@ -53,8 +53,24 @@ const SectionAbout = () => {
           <SocialMedia />
         </div>
       </div>
-      <RadialGradient position="top-50 sm:top-0 right-10" size="size-80" />
-      <RadialGradient position="bottom-25 left-10" size="size-100" />
+      <Decoration
+        img="/img/decoration/decor-6.png"
+        position="sm:top-0 top-130 -right-10 sm:-right-20"
+        rotate="rotate-250"
+        size="sm:size-100 size-55 -z-1"
+      />
+      <Decoration
+        img="/img/decoration/decor-1.png"
+        position="-top-10 -left-20"
+        rotate="rotate-130"
+        size="size-80 -z-1"
+      />
+      <Decoration
+        img="/img/decoration/decor-5.png"
+        position="sm:bottom-8 bottom-0 right-5 sm:right-1/2 sm:-mr-70"
+        rotate="rotate-250"
+        size="size-40 -z-1"
+      />
     </section>
   );
 };
@@ -79,7 +95,7 @@ type SocialMediaItemProps = {
 const SocialMediaItem = (props: SocialMediaItemProps) => {
   const { icon, link } = props;
   return (
-    <div className="w-fit items-center gap-2 rounded-md bg-slate-100/80 px-2.5 py-1.5 text-xs">
+    <div className="w-fit items-center gap-2 rounded-md bg-white px-2.5 py-1.5 text-xs shadow-xs">
       <a href={link}>{icon}</a>
     </div>
   );

@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import { ProductCoffe } from "../../assets/datas/productCoffe";
-import formatPrice from "../../utils/formatPrice";
+import formatPrice from "../../../utils/formatPrice";
+import { ProductCoffe } from "../../../assets/datas/productCoffe";
 
 interface ContentProductMenuProps {
   item: ProductCoffe;

@@ -8,6 +8,8 @@
   --font-poppins: "Poppins", sans-serif;
   --font-fair: "Playfair Display", sans-serif;
   --font-outfit: "Outfit", serif;
+  --color-coffe: #c3b091;
+  --color-secondary: #FFF0D1;
 }
 
 @media (max-width: 418px) {

@@ -1,10 +1,11 @@
 import { useState } from "react";
-import productCoffe, { ProductCoffe } from "../../assets/datas/productCoffe";
+import productCoffe, { ProductCoffe } from "../../../assets/datas/productCoffe";
 import { ArrowCircleUpRight } from "@phosphor-icons/react";
-import PrimaryButton from "../UI/PrimaryButton";
-import ContentProductMenu from "../ContentProducts/ContentProductMenu";
-import SubTitle from "../UI/SubTitle";
-import Title from "../UI/Title";
+import PrimaryButton from "../../UI/PrimaryButton";
+import SubTitle from "../../UI/SubTitle";
+import Title from "../../UI/Title";
+import ContentProductMenu from "./ContentProductMenu";
+import DecorationMenus from "./DecorationMenus";
 
 const SectionMenus = () => {
   const [product, _setProduct] = useState<ProductCoffe[]>(productCoffe);
@@ -14,7 +15,7 @@ const SectionMenus = () => {
   return (
     <section
       id="menus"
-      className="flex w-full flex-col items-center bg-slate-100 py-20 text-center"
+      className="bg-secondary/25 relative flex w-full flex-col items-center py-20 text-center"
     >
       <div className="w-11/12 sm:w-xl">
         <SubTitle
@@ -35,10 +36,11 @@ const SectionMenus = () => {
       </div>
       <PrimaryButton
         icon={<ArrowCircleUpRight size={25} />}
-        bgColor="bg-[#B17457] rounded-sm py-2.5 mt-15"
+        bgColor="bg-coffe rounded-sm py-2.5 mt-15"
         link="#"
         text="Lihat Selengkapnya"
       />
+      <DecorationMenus />
     </section>
   );
 };
