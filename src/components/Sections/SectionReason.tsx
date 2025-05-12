@@ -2,6 +2,7 @@ import { ArrowRight, Book } from "@phosphor-icons/react";
 import PrimaryButton from "../UI/PrimaryButton";
 import { ReactNode } from "react";
 import SubTitle from "../UI/SubTitle";
+import SecondaryBtn from "../UI/SecondaryBtn";
 
 const SectionReason = () => {
   const classBefore: string =
@@ -11,7 +12,6 @@ const SectionReason = () => {
       id="reservasi"
       className={`${classBefore} relative flex flex-col items-center justify-around bg-slate-300 bg-[url(/img/bg-1.jpg)] bg-cover bg-fixed bg-center py-35 text-white sm:w-full sm:flex-row sm:items-start`}
     >
-      {/* <div className="flex w-full absolute z-8 justify-around"> */}
       <div className="relative z-4 flex w-11/12 flex-col gap-3 sm:w-sm">
         <SubTitle text="Reservasi" />
         <h2 className="font-outfit text-6xl font-semibold">Jam Kerja</h2>
@@ -31,7 +31,6 @@ const SectionReason = () => {
           <span className="mx-1 text-amber-600">:</span> 00
         </WorkHours>
       </div>
-      {/* </div> */}
     </section>
   );
 };
@@ -43,14 +42,13 @@ const ButtonReservation = () => {
         text="Pesan Meja"
         link="#"
         icon={<Book size={23} />}
-        bgColor="rounded-sm py-2.5 bg-slate-800"
+        customStyle="rounded-sm py-2.5 bg-slate-800"
       />
-      <button
-        className={`relative flex w-fit items-center gap-2 rounded-sm px-4 py-2.5`}
-      >
-        Hubungi Kami
-        <ArrowRight size={20} />
-      </button>
+      <SecondaryBtn
+        text="Hubungi Kami"
+        icon={<ArrowRight size={20} />}
+        link="#contact"
+      />
     </div>
   );
 };

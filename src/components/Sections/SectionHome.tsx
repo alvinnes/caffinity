@@ -19,7 +19,7 @@ const SectionHome = () => {
         <div className="mt-10 flex gap-6 self-start sm:ml-14 sm:gap-4">
           <PrimaryButton
             text="Beli Sekarang!"
-            bgColor="bg-[#B17457]"
+            customStyle="bg-[#B17457] rounded-full font-semibold"
             link="#product"
             icon={<ArrowCircleUpRight size={25} />}
           />
@@ -41,7 +41,7 @@ const SectionHome = () => {
         </div>
       </div>
       <div className="absolute -bottom-30 left-1/2 flex size-50 -translate-x-1/2 justify-center rounded-t-full bg-white">
-        <span className="mt-6 flex size-15 items-center justify-center rounded-full bg-slate-800 p-0.5 text-white transition-all duration-500 hover:translate-y-1">
+        <span className="mt-4 flex size-15 items-center justify-center rounded-full bg-slate-800 p-0.5 text-white transition-all duration-500 hover:translate-y-1">
           <a href="#about">
             <ArrowDown size={40} />
           </a>

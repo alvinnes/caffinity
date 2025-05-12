@@ -24,7 +24,7 @@ const ContentProductHome = ({ product }: ContentProduct) => {
       </div>
       <PrimaryButton
         text="Masukkan Keranjang"
-        bgColor="bg-[#B17457] mb-13 mt-4 "
+        customStyle="bg-[#B17457] rounded-full font-semibold mb-13 mt-4"
         link="#product"
         icon={<ShoppingCart size={20} />}
       />

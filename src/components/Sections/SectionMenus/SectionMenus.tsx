@@ -36,7 +36,7 @@ const SectionMenus = () => {
       </div>
       <PrimaryButton
         icon={<ArrowCircleUpRight size={25} />}
-        bgColor="bg-coffe rounded-sm py-2.5 mt-15"
+        customStyle="bg-coffe rounded-sm py-2.5 mt-15"
         link="#"
         text="Lihat Selengkapnya"
       />

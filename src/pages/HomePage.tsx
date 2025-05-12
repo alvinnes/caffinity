@@ -1,6 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import SectionAbout from "../components/Sections/SectionAbout";
+import SectionAbout from "../components/Sections/SectionAbout/SectionAbout";
 import SectionContact from "../components/Sections/SectionContact/SectionContact";
 import SectionFeatures from "../components/Sections/SectionFeatures/SectionFeatures";
 import SectionHome from "../components/Sections/SectionHome";

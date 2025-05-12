@@ -6,7 +6,7 @@ const DecorationMenus = () => {
     <Fragment>
       <Decoration
         img="/img/decoration/decor-7.png"
-        position="sm:-right-15 right-65 -top-10 sm:top-10 -z-1"
+        position="sm:-right-15 right-63 -top-10 sm:top-10 -z-1"
         size="size-40 sm:size-110"
         rotate="rotate-130 sm:rotate-280"
       />
