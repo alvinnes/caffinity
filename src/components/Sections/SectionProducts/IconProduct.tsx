@@ -4,9 +4,9 @@ import { ReactNode } from "react";
 const IconProduct = () => {
   return (
     <div className="absolute top-1/2 flex w-full -translate-y-1/2 justify-center gap-2">
-      <IconProductItem icon={<Heart size={23} weight="bold" />} />
-      <IconProductItem icon={<Eye size={23} weight="bold" />} />
-      <IconProductItem icon={<ShoppingCart size={23} weight="bold" />} />
+      <IconProductItem icon={<Heart size={23} />} />
+      <IconProductItem icon={<Eye size={23} />} />
+      <IconProductItem icon={<ShoppingCart size={23} />} />
     </div>
   );
 };
@@ -18,7 +18,7 @@ interface IconProductItemProps {
 const IconProductItem = (props: IconProductItemProps) => {
   const { icon } = props;
   return (
-    <span className="flex size-6 items-center justify-center rounded-full bg-orange-300 p-1 text-white shadow-sm">
+    <span className="flex size-7 items-center justify-center rounded-full bg-orange-300 p-1 text-white shadow-sm">
       {icon}
     </span>
   );

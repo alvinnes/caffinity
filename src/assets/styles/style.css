@@ -9,7 +9,7 @@
   --font-fair: "Playfair Display", sans-serif;
   --font-outfit: "Outfit", serif;
   --color-coffe: #c3b091;
-  --color-secondary: #FFF0D1;
+  --color-secondary: #fff0d1;
 }
 
 @media (max-width: 418px) {
@@ -19,4 +19,8 @@
     padding: 0;
     overflow-x: hidden;
   }
+}
+
+.scroll-set::-webkit-scrollbar {
+  display: none;
 }

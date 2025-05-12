@@ -1,4 +1,4 @@
-import TextAbout from "../../SectionText/TextAbout";
+import TextAbout from "./TextAbout";
 import Title from "../../UI/Title";
 import SubTitle from "../../UI/SubTitle";
 import DecorationAbout from "./DecorationAbout";

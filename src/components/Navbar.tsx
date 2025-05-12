@@ -1,6 +1,6 @@
 import { Heart, List, ShoppingCart, User } from "@phosphor-icons/react";
 import useClickedIcon from "../hooks/useClickedIcon";
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router";
 
 const Navbar = () => {
   const clickedBtn = useClickedIcon();
@@ -12,13 +12,13 @@ const Navbar = () => {
     <nav className="fixed top-2 left-1/2 z-999 flex w-11/12 -translate-x-1/2 items-center justify-between rounded-md bg-white px-[3%] shadow-sm sm:w-10/12">
       <div className="flex items-center gap-8">
         <div className="h-15 w-25 sm:h-20 sm:w-30">
-          <a href="#home">
+          <Link to="/">
             <img
               src="/img/logo.png"
               alt=""
               className="size-full object-cover"
             />
-          </a>
+          </Link>
         </div>
         <ul className="hidden gap-6 sm:flex">
           <NavigationItem link="#about" text="Tentang" />

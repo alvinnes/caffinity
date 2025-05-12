@@ -1,11 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import SubTitle from "../UI/SubTitle";
-import Title from "../UI/Title";
+import SubTitle from "../../UI/SubTitle";
+import Title from "../../UI/Title";
 import "swiper/css";
 import { Pagination } from "swiper/modules";
-import testimonials, { TestimonialsDatas } from "../../services/Testimonials";
-import ContentTestimonials from "../ContentProducts/ContentTestimonials";
-import Decoration from "../UI/Decoration";
+import testimonials, {
+  TestimonialsDatas,
+} from "../../../services/Testimonials";
+import DecorationTestimonials from "./DecorationTestimonials";
+import ContentTestimonials from "./ContentTestimonials";
 
 const SectionTestimonials = () => {
   return (
@@ -49,23 +51,7 @@ const SectionTestimonials = () => {
           ))}
         </Swiper>
       </div>
-      <Decoration
-        img="/img/decoration/decor-6.png"
-        position="-left-4 sm:-left-8 top-0"
-        size="size-40 sm:size-100"
-        rotate="rotate-90"
-      />
-      <Decoration
-        img="/img/decoration/decor-6.png"
-        position="right-0 -bottom-4 sm:-bottom-8"
-        size="size-40 sm:size-110"
-        rotate="rotate-250"
-      />
-      <Decoration
-        img="/img/decoration/decor-4.png"
-        position="sm:right-22 right-4 top-1/2 -translate-y-1/2 -mt-10 sm:-mt-20"
-        size="size-35 sm:size-50"
-      />
+      <DecorationTestimonials />
     </section>
   );
 };

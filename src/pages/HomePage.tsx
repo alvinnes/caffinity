@@ -8,7 +8,7 @@ import SectionMenus from "../components/Sections/SectionMenus/SectionMenus";
 import SectionProducts from "../components/Sections/SectionProducts/SectionProducts";
 import SectionRating from "../components/Sections/SectionRating";
 import SectionReason from "../components/Sections/SectionReason";
-import SectionTestimonials from "../components/Sections/SectionTestimonials";
+import SectionTestimonials from "../components/Sections/SectionTestimonials/SectionTestimonials";
 import Sidebar from "../components/Sidebar";
 
 const HomePage = () => {
