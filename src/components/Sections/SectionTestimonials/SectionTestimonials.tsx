@@ -45,7 +45,7 @@ const SectionTestimonials = () => {
           modules={[Pagination]}
         >
           {testimonials.map((testimoni: TestimonialsDatas) => (
-            <SwiperSlide>
+            <SwiperSlide key={testimoni.name}>
               <ContentTestimonials testimoni={testimoni} />
             </SwiperSlide>
           ))}
