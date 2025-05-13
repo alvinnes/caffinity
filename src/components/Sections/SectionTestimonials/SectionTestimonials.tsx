@@ -3,11 +3,11 @@ import SubTitle from "../../UI/SubTitle";
 import Title from "../../UI/Title";
 import "swiper/css";
 import { Pagination } from "swiper/modules";
+import DecorationTestimonials from "./DecorationTestimonials";
+import ContentTestimonials from "./ContentTestimonials";
 import testimonials, {
   TestimonialsDatas,
 } from "../../../services/Testimonials";
-import DecorationTestimonials from "./DecorationTestimonials";
-import ContentTestimonials from "./ContentTestimonials";
 
 const SectionTestimonials = () => {
   return (

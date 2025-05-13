@@ -1,5 +1,5 @@
 import { Star } from "@phosphor-icons/react";
-import { TestimonialsDatas } from "../../services/Testimonials";
+import { TestimonialsDatas } from "../../../services/Testimonials";
 
 interface ContentTestimonialsProps {
   testimoni: TestimonialsDatas;
@@ -18,7 +18,7 @@ const ContentTestimonials = (props: ContentTestimonialsProps) => {
         <Star size={15} className="text-orange-300" weight="fill" />
         <Star size={15} className="text-orange-300" weight="fill" />
         <Star size={15} className="text-orange-300" weight="fill" />
-        <p className="font-outfit text-sm ml-2">{testimoni.rate}</p>
+        <p className="font-outfit ml-2 text-sm">{testimoni.rate}</p>
       </div>
 
       <p className="line-clamp-5 text-sm leading-6 text-ellipsis">
