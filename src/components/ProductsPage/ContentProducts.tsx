@@ -17,7 +17,8 @@ const ContentProducts = () => {
   const [isFiltering, setIsFiltering] = useState<boolean>(false);
 
   return (
-    <section className="flex w-full flex-col items-center pt-20 pb-10 sm:pt-30">
+    <section className="flex w-full flex-
+    col items-center pt-20 pb-10 sm:pt-30">
       <div className="mb-20 sm:h-120 h-90 w-full sm:w-10/12 overflow-x-hidden rounded-xl bg-slate-100">
         <Swiper
           grabCursor={true}
