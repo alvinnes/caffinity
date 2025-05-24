@@ -8,6 +8,7 @@ export interface ProductCoffe {
   id: number;
   rate: string;
   review: number;
+  quantity?: number;
 }
 
 const productCoffe: ProductCoffe[] = [

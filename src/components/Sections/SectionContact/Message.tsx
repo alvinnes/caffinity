@@ -11,7 +11,7 @@ const Message = () => {
         name="message"
         id="message"
         placeholder="masukkan pesan disini.."
-        className="w-full border-0 bg-slate-100 p-3 text-sm outline-0 transition-all duration-300 focus:ring-3 focus:ring-amber-100/40"
+        className="focus:ring-coffe/50 w-full rounded-2xl border-0 bg-white p-3 text-sm shadow-lg ring-slate-100 outline-0 transition-all duration-500 focus:ring-3"
         cols={7}
         rows={7}
       ></textarea>

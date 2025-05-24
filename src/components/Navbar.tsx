@@ -1,11 +1,23 @@
 import { Heart, List, ShoppingCart, User } from "@phosphor-icons/react";
-import useClickedIcon from "../hooks/useClickedIcon";
 import { Link, useLocation } from "react-router";
+import useClickedIcon from "../hooks/useClickedIcon";
+import { useEffect } from "react";
+import useQuantityProduct from "../hooks/useQuantityProduct";
 
 const Navbar = () => {
-  const clickedBtn = useClickedIcon();
+  const setClickedBtn = useClickedIcon((state) => state.setClickedIcon);
+  const clickedBtn = useClickedIcon((state) => state.clickedIcon);
+  const setQuantity = useQuantityProduct((state) => state.setQuantity);
+  const quantity = useQuantityProduct((state) => state.quantity);
+
+  useEffect(() => {
+    const storeTotalQuantity =
+      JSON.parse(localStorage.getItem("totalQuantity")!) || [];
+    setQuantity(storeTotalQuantity);
+  }, [setQuantity]);
+
   const handleShowNavbar = () => {
-    clickedBtn?.setClickedIcon(!clickedBtn.clickedIcon);
+    setClickedBtn(!clickedBtn);
   };
 
   return (
@@ -15,7 +27,7 @@ const Navbar = () => {
           <Link to="/">
             <img
               src="/img/logo.png"
-              alt=""
+              alt="foto logo caffinty"
               className="size-full object-cover"
             />
           </Link>
@@ -32,7 +44,14 @@ const Navbar = () => {
       </div>
 
       <div className="flex cursor-pointer items-center gap-3 text-slate-700">
-        <ShoppingCart className="size-6 sm:size-5" />
+        <div className="relative">
+          <ShoppingCart className="size-6 sm:size-5" />
+          <span
+            className={`${quantity == 0 && "hidden"} bg-coffe absolute -top-2 left-2 flex size-3 items-center justify-center rounded-full p-2.5 text-[0.8em] text-white`}
+          >
+            {quantity}
+          </span>
+        </div>
         <Heart className="size-6 sm:size-5" />
         <User size={20} />
         <List className="-ml-2 size-6 sm:hidden" onClick={handleShowNavbar} />
@@ -52,7 +71,7 @@ const NavigationItem = (props: NavigationItemProps) => {
   const activeNav = location.hash == link;
   return (
     <li
-      className={`${activeNav ? "text-[#E4CDA7]" : "text-black"} hover:text-[#E4CDA7] `}
+      className={`${activeNav ? "text-[#E4CDA7]" : "text-black"} hover:text-[#E4CDA7]`}
     >
       <a href={link}>{text}</a>
     </li>

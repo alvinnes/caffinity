@@ -4,6 +4,7 @@ import SubTitle from "../../UI/SubTitle";
 import Title from "../../UI/Title";
 import ContentProducts from "./ContentProducts";
 import { Link } from "react-router";
+import NotifAddToCart from "./NotifAddToCart";
 
 const SectionProducts = () => {
   const popularProduct = productCoffe.filter(
@@ -36,6 +37,7 @@ const SectionProducts = () => {
           Lihat Selengkapnya
         </Link>
       </button>
+      <NotifAddToCart />
     </section>
   );
 };

@@ -1,10 +1,14 @@
-import { useContext } from "react";
-import { ClickedIconContext } from "../context/ClickedIcon";
+import { create } from "zustand";
 
-const useClickedIcon = () => {
-  const context = useContext(ClickedIconContext);
-  if (!context) return;
-  return context;
-};
+interface State {
+  clickedIcon: boolean;
+  setClickedIcon: (condition: boolean) => void;
+}
+
+const useClickedIcon = create<State>((set) => ({
+  clickedIcon: false,
+  setClickedIcon: (condition: boolean) =>
+    set((state) => ({ clickedIcon: (state.clickedIcon = condition) })),
+}));
 
 export default useClickedIcon;

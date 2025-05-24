@@ -24,3 +24,9 @@
 .scroll-set::-webkit-scrollbar {
   display: none;
 }
+
+.swiper {
+  --swiper-pagination-color: #c3b091;
+  --swiper-pagination-bullet-inactive-color: white;
+  --swiper-pagination-bottom: 18px;
+}

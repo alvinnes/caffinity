@@ -9,9 +9,9 @@ interface FeatureItemProps {
 const FeatureItem = (props: FeatureItemProps) => {
   const { title, text, icon } = props;
   return (
-    <div className="flex w-11/12 flex-col items-center justify-center gap-4 text-center sm:w-100">
-      <span className="text-coffe">{icon}</span>
-      <h2 className="font-outfit text-2xl text-slate-700 font-semibold sm:text-nowrap">
+    <div className="bg-coffe/50 shadow-coffe/30 flex h-60 w-11/12 flex-col items-center justify-center gap-2 rounded-xl p-2 text-center shadow-lg sm:w-100">
+      <span className="text-slate-700">{icon}</span>
+      <h2 className="font-outfit text-2xl font-semibold text-slate-700 sm:text-nowrap">
         {title}
       </h2>
       <p>{text}</p>

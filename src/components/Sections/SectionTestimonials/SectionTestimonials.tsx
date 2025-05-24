@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SubTitle from "../../UI/SubTitle";
 import Title from "../../UI/Title";
 import "swiper/css";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import DecorationTestimonials from "./DecorationTestimonials";
 import ContentTestimonials from "./ContentTestimonials";
 import testimonials, {
@@ -42,7 +42,8 @@ const SectionTestimonials = () => {
           pagination={{ clickable: true, dynamicBullets: true }}
           grabCursor={true}
           watchSlidesProgress={true}
-          modules={[Pagination]}
+          autoplay={{ delay: 5000 }}
+          modules={[Pagination, Autoplay]}
         >
           {testimonials.map((testimoni: TestimonialsDatas) => (
             <SwiperSlide key={testimoni.name}>

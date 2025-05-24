@@ -8,6 +8,9 @@ type ContentProduct = {
 };
 
 const ContentProductHome = ({ product }: ContentProduct) => {
+  const addToCart = (productItem: SlideProduct) => {
+    console.log(productItem)
+  };
   return (
     <>
       <img
@@ -27,6 +30,7 @@ const ContentProductHome = ({ product }: ContentProduct) => {
         customStyle="bg-[#B17457] rounded-full font-semibold mb-13 mt-4"
         link="#product"
         icon={<ShoppingCart size={20} />}
+        onClick={() => addToCart(product)}
       />
     </>
   );

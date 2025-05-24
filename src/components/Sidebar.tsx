@@ -2,10 +2,10 @@ import { useLocation } from "react-router";
 import useClickedIcon from "../hooks/useClickedIcon";
 
 const Sidebar = () => {
-  const clickedBtn = useClickedIcon();
+  const clickedIcon = useClickedIcon((state) => state.clickedIcon);
   return (
     <aside
-      className={`${clickedBtn!.clickedIcon ? "right-0 opacity-100" : "-right-full opacity-0"} ease fixed top-0 z-888 h-screen w-7/12 bg-white shadow-md transition-all duration-600`}
+      className={`${clickedIcon ? "right-0 opacity-100" : "-right-full opacity-0"} ease fixed top-0 z-888 h-screen w-7/12 bg-white shadow-md transition-all duration-600`}
     >
       <ul className="mx-4 mt-30 flex flex-col gap-6">
         <NavigationItem link="#about" text="Tentang" />
