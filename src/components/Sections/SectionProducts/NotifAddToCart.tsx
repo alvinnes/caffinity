@@ -1,16 +1,18 @@
-import { CheckCircle } from "@phosphor-icons/react";
-import useNotifCart from "../../../hooks/useNotifCart";
+import { ReactNode } from "react";
 
-const NotifAddToCart = () => {
-  const isClicked = useNotifCart((state) => state.isClicked);
+interface NotifAddTocartProps {
+  text: string;
+  icon: ReactNode;
+  isClicked: boolean;
+}
+
+const NotifAddToCart = ({ text, icon, isClicked }: NotifAddTocartProps) => {
   return (
     <div
-      className={`${isClicked ? "top-20 opacity-100 sm:top-25" : "top-15 opacity-0"} fixed z-1000 flex items-center gap-2 rounded-sm bg-white p-3 shadow-xl transition-all duration-500 ease-out`}
+      className={`${isClicked ? "top-20 opacity-100 sm:top-25" : "top-15 opacity-0"} fixed z-1000 flex w-xs items-center gap-6 rounded-sm bg-white p-3 shadow-xl transition-all duration-500 ease-out`}
     >
-      <CheckCircle size={30} className="text-emerald-300" weight="fill" />
-      <p className="font-semibold text-slate-600">
-        Berhasil Memasukkan Ke Keranjang
-      </p>
+      {icon}
+      <p className="font-semibold text-slate-600">{text}</p>
     </div>
   );
 };

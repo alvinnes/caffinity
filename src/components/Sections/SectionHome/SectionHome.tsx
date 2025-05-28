@@ -2,11 +2,12 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import slideProduct, { SlideProduct } from "../../services/SlideProduct";
-import { ArrowCircleUpRight, ArrowDown } from "@phosphor-icons/react";
-import TextHome from "../SectionText/TextHome";
-import PrimaryButton from "../UI/PrimaryButton";
-import ContentProductHome from "../ContentProducts/ContentProductHome";
+import slideProduct, { SlideProduct } from "../../../services/SlideProduct";
+import { ArrowCircleUpRight } from "@phosphor-icons/react";
+import TextHome from "./TextHome";
+import PrimaryButton from "../../UI/PrimaryButton";
+import ContentProductHome from "./ContentProductHome";
+import BtnArrowHome from "./BtnArrowHome";
 
 const SectionHome = () => {
   return (
@@ -40,13 +41,7 @@ const SectionHome = () => {
           </Swiper>
         </div>
       </div>
-      <div className="absolute -bottom-30 left-1/2 flex size-50 -translate-x-1/2 justify-center rounded-t-full bg-white">
-        <span className="mt-4 flex size-15 items-center justify-center rounded-full bg-slate-800 p-0.5 text-white transition-all duration-500 hover:translate-y-1">
-          <a href="#about">
-            <ArrowDown size={40} />
-          </a>
-        </span>
-      </div>
+      <BtnArrowHome />
     </section>
   );
 };

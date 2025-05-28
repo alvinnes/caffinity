@@ -9,6 +9,12 @@ const Navbar = () => {
   const clickedBtn = useClickedIcon((state) => state.clickedIcon);
   const setQuantity = useQuantityProduct((state) => state.setQuantity);
   const quantity = useQuantityProduct((state) => state.quantity);
+  const quantityWiselist = useQuantityProduct(
+    (state) => state.quantityWiselist,
+  );
+  const setQuantityWiselist = useQuantityProduct(
+    (state) => state.setQuantityWiselist,
+  );
 
   useEffect(() => {
     const storeTotalQuantity =
@@ -19,6 +25,12 @@ const Navbar = () => {
   const handleShowNavbar = () => {
     setClickedBtn(!clickedBtn);
   };
+
+  useEffect(() => {
+    const storedTotalQuantityWiselist =
+      JSON.parse(localStorage.getItem("totalWiselist")!) || [];
+    setQuantityWiselist(storedTotalQuantityWiselist);
+  }, [setQuantityWiselist]);
 
   return (
     <nav className="fixed top-2 left-1/2 z-999 flex w-11/12 -translate-x-1/2 items-center justify-between rounded-md bg-white px-[3%] shadow-sm sm:w-10/12">
@@ -44,15 +56,26 @@ const Navbar = () => {
       </div>
 
       <div className="flex cursor-pointer items-center gap-3 text-slate-700">
-        <div className="relative">
-          <ShoppingCart className="size-6 sm:size-5" />
-          <span
-            className={`${quantity == 0 && "hidden"} bg-coffe absolute -top-2 left-2 flex size-3 items-center justify-center rounded-full p-2.5 text-[0.8em] text-white`}
-          >
-            {quantity}
-          </span>
-        </div>
-        <Heart className="size-6 sm:size-5" />
+        <Link to={"/cart"}>
+          <div className="relative">
+            <ShoppingCart className="size-6 sm:size-5" />
+            <span
+              className={`${quantity == 0 && "hidden"} bg-coffe absolute -top-2 left-2 flex size-3 items-center justify-center rounded-full p-2.5 text-[0.8em] text-white`}
+            >
+              {quantity}
+            </span>
+          </div>
+        </Link>
+        <Link to={"/wishlist"}>
+          <div className="relative">
+            <Heart className="size-6 sm:size-5" />
+            <span
+              className={`${quantityWiselist == 0 && "hidden"} bg-coffe absolute -top-2 left-2 flex size-3 items-center justify-center rounded-full p-2.5 text-[0.8em] text-white`}
+            >
+              {quantityWiselist}
+            </span>
+          </div>
+        </Link>
         <User size={20} />
         <List className="-ml-2 size-6 sm:hidden" onClick={handleShowNavbar} />
       </div>

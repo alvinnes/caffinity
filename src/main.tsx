@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import ScrollTo from "./components/ScrollTo";
+import CartProductPage from "./pages/CartProductPage";
+import WishlistPage from "./pages/WishlistPage";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -12,6 +14,8 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductsPage />} />
+        <Route path="/cart" element={<CartProductPage />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

@@ -1,7 +1,7 @@
 import { Star } from "@phosphor-icons/react";
 import PrimaryButton from "../UI/PrimaryButton";
 import { SlideHeaderProduct } from "../../services/SlideHeaderProduct";
-import formatPrice from "../../utils/formatPrice";
+import PriceProduct from "../PriceProduct";
 
 interface ContentHeaderProductsProps {
   product: SlideHeaderProduct;
@@ -44,18 +44,6 @@ const ContentHeaderProducts = ({ product }: ContentHeaderProductsProps) => {
   );
 };
 
-interface PriceProductProps {
-  price: number;
-  additionalStyle?: string;
-}
 
-const PriceProduct = (props: PriceProductProps) => {
-  const { price, additionalStyle } = props;
-  return (
-    <p className={`${additionalStyle} text-md font-semibold sm:text-lg`}>
-      {formatPrice(price)}
-    </p>
-  );
-};
 
 export default ContentHeaderProducts;
