@@ -28,7 +28,7 @@ const SectionTestimonials = () => {
       </div>
       <div className="w-11/12 sm:w-10/12">
         <Swiper
-          className="h-90"
+          className="slide-testimonials h-90"
           slidesPerView={3}
           breakpoints={{
             360: {

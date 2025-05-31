@@ -32,8 +32,8 @@ const ContentCartProduct = () => {
       </div>
       <div className="scroll-set h-[85%] w-full overflow-y-scroll">
         {productCart.length < 1 && (
-          <p className="absolute top-1/2 left-1/2 flex -translate-1/2 items-center gap-4 text-2xl font-bold text-slate-600">
-            <ShoppingCart size={30} weight="bold" /> Keranjang Masih Kosong
+          <p className="absolute top-1/2 left-1/2 flex -translate-1/2 flex-col items-center gap-4 text-center text-2xl font-bold text-slate-600">
+            <ShoppingCart size={80} /> Keranjang Masih Kosong
           </p>
         )}
         {productCart.map((product: DatasProducts) => (

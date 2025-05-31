@@ -6,7 +6,9 @@ const useAddToWiselist = () => {
   const setIsClickedWiselist = useNotifCart(
     (state) => state.setIsClickedWiselist,
   );
-
+  const setIsSuccesAddWishlist = useNotifCart(
+    (state) => state.setIsSuccesAddWishlist,
+  );
   const setQuantityWiselist = useQuantityProduct(
     (state) => state.setQuantityWiselist,
   );
@@ -30,6 +32,10 @@ const useAddToWiselist = () => {
         "totalWiselist",
         JSON.stringify(totalQuantityWiselist),
       );
+      setIsSuccesAddWishlist(true);
+      setTimeout(() => {
+        setIsSuccesAddWishlist(false);
+      }, 2000);
     } else {
       setIsClickedWiselist(true);
 

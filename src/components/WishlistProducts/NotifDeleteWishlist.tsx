@@ -1,29 +1,36 @@
 import { Trash } from "@phosphor-icons/react";
 import useProductCart from "../../hooks/useProductCart";
 import useQuantityProduct from "../../hooks/useQuantityProduct";
+import useNotifCart from "../../hooks/useNotifCart";
 
-const NotifDeleteProducts = () => {
-  const setProductCart = useProductCart((state) => state.setProductCart);
-  const setIsClicked = useProductCart((state) => state.setIsClicked);
-  const isClicked = useProductCart((state) => state.isClicked);
-  const setQuantity = useQuantityProduct((state) => state.setQuantity);
+const NotifDeleteWishlist = () => {
+  const setWishlistProducts = useProductCart(
+    (state) => state.setWishlistProducts,
+  );
+  const setIsClickedWishlist = useNotifCart(
+    (state) => state.setIsClickedWiselist,
+  );
+  const isClickedWishlist = useNotifCart((state) => state.isClickedWiselist);
+  const setQuantityWishlist = useQuantityProduct(
+    (state) => state.setQuantityWiselist,
+  );
 
   const handleRemoveDatas = () => {
-    setProductCart([]);
-    localStorage.removeItem("products");
-    localStorage.removeItem("totalQuantity");
-    setIsClicked(false);
-    setQuantity(0);
+    setWishlistProducts([]);
+    localStorage.removeItem("whislists");
+    localStorage.removeItem("totalWiselist");
+    setIsClickedWishlist(false);
+    setQuantityWishlist(0);
   };
   const handleDisagree = () => {
-    setIsClicked(false);
+    setIsClickedWishlist(false);
   };
   return (
     <div
-      className={`${isClicked ? "visible opacity-100" : "invisible opacity-0"} fixed top-0 left-0 size-full bg-white/10 backdrop-blur-sm transition-all duration-500`}
+      className={`${isClickedWishlist ? "visible opacity-100" : "invisible opacity-0"} fixed top-0 left-0 size-full bg-white/10 backdrop-blur-sm transition-all duration-500`}
     >
       <div
-        className={`${isClicked ? "mt-0 scale-100 opacity-100" : "-mt-8 scale-90 opacity-0"} fixed top-1/2 left-1/2 flex h-60 w-60 -translate-1/2 flex-col items-center gap-4 rounded-xl bg-white p-2 text-slate-600 shadow-md transition-all duration-500 ease-in-out`}
+        className={`${isClickedWishlist ? "mt-0 scale-100 opacity-100" : "-mt-8 scale-90 opacity-0"} fixed top-1/2 left-1/2 flex h-60 w-60 -translate-1/2 flex-col items-center gap-4 rounded-xl bg-white p-2 text-slate-600 shadow-md transition-all duration-500 ease-in-out`}
       >
         <Trash size={70} weight="bold" className="mt-4" />
         <h3 className="text-center">
@@ -63,4 +70,4 @@ const BtnAgreement = ({ color, text, clicked }: BtnAgreementProps) => {
   );
 };
 
-export default NotifDeleteProducts;
+export default NotifDeleteWishlist;

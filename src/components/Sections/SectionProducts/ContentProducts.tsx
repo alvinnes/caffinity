@@ -12,7 +12,7 @@ const ContentProducts = (props: ContentProductsProps) => {
 
   return (
     <div
-      className={`${customStyle} sm:shadow-coffe/50 relative h-85 w-9/12 rounded-md bg-white p-2 shadow-none sm:m-0 sm:w-full sm:shadow-xl`}
+      className={`${customStyle} sm:shadow-coffe/50 relative h-85 w-full rounded-md bg-white p-2 shadow-none sm:m-0 sm:shadow-lg`}
     >
       <IconProduct product={product} />
       <div className="bg-secondary h-40 w-full overflow-hidden rounded-xl">

@@ -10,7 +10,7 @@ const ContentProductMenu = (props: ContentProductMenuProps) => {
   const { item } = props;
   return (
     <Link to={`/`}>
-      <div className="flex items-center justify-between rounded-md bg-white px-2 py-3 shadow-sm transition-all duration-400 hover:scale-97 sm:w-11/12 sm:px-8">
+      <div className="flex items-center justify-between rounded-md mx-3 bg-white px-2 py-3 shadow-sm transition-all duration-400 hover:scale-97 sm:w-11/12 sm:px-8">
         <div className="size-14 rounded-full bg-slate-100 p-1">
           <img
             src={item.img}

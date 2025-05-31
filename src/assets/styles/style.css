@@ -26,7 +26,17 @@
 }
 
 .swiper {
-  --swiper-pagination-color: #c3b091;
+  --swiper-pagination-color: white;
   --swiper-pagination-bullet-inactive-color: white;
   --swiper-pagination-bottom: 18px;
+}
+
+.slide-testimonials {
+  --swiper-pagination-color: grey;
+  --swiper-pagination-bullet-inactive-color: black;
+}
+
+.slide-popular-products {
+  --swiper-pagination-color: grey;
+  --swiper-pagination-bullet-inactive-color: black;
 }

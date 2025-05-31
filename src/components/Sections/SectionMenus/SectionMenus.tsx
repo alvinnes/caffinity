@@ -29,7 +29,7 @@ const SectionMenus = () => {
           dengan rasa, energi, dan perhatian.
         </p>
       </div>
-      <div className="mt-20 grid w-11/12 grid-cols-1 place-content-center gap-x-6 gap-y-4 sm:w-10/12 sm:grid-cols-2 sm:place-items-center sm:px-8">
+      <div className="mt-20 grid w-11/12 grid-cols-1 place-content-center gap-x-15 gap-y-4 sm:w-10/12 sm:grid-cols-2 sm:place-items-center sm:px-8">
         {populerProduct.map((item: ProductCoffe) => (
           <ContentProductMenu item={item} key={item.id} />
         ))}
