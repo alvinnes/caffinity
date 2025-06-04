@@ -11,13 +11,10 @@ const Message = () => {
         name="message"
         id="message"
         placeholder="masukkan pesan disini.."
-        className="focus:ring-coffe/50 w-full rounded-2xl border-0 bg-white p-3 text-sm shadow-lg ring-slate-100 outline-0 transition-all duration-500 focus:ring-3"
+        className="w-full rounded-sm border-0 bg-white p-3 text-sm shadow-[6px_5px_0_black] outline-0 transition-all duration-300 focus:translate-y-1 focus:shadow-[2px_2px_0_black]"
         cols={7}
         rows={7}
       ></textarea>
-      <button className="mt-3 rounded-sm bg-[#B17457] px-4 py-2 text-sm font-semibold text-white">
-        Kirim
-      </button>
     </label>
   );
 };

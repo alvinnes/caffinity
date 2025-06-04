@@ -1,11 +1,18 @@
+import { useState } from "react";
 import Title from "../../UI/Title";
 import InputItem from "./InputItem";
 import Message from "./Message";
 import { Envelope, User } from "@phosphor-icons/react";
 
 const ContentFormContact = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
-    <div className="flex w-11/12 flex-col items-center gap-6 p-4 sm:w-xl">
+    <form
+      action={"/"}
+      method="post"
+      className="flex w-11/12 flex-col items-center gap-6 p-4 sm:w-xl"
+    >
       <Title text="Hubungi Kami" customStyle="text-slate-700" />
       <InputItem
         label="Username"
@@ -22,7 +29,14 @@ const ContentFormContact = () => {
         type="email"
       />
       <Message />
-    </div>
+      <button
+        onClick={() => setIsClicked(!isClicked)}
+        // disabled={isClicked}
+        className="w-30 cursor-pointer self-start rounded-sm bg-[#B17457] px-4 py-2 text-sm font-semibold text-white shadow-[4px_4px_0_black] transition-all active:translate-y-1 active:shadow-none sm:ml-11"
+      >
+        {isClicked ? "Loading..." : "Kirim"}
+      </button>
+    </form>
   );
 };
 

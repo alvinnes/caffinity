@@ -1,10 +1,10 @@
-import Navbar from "../components/Navbar";
 import ContentProducts from "../components/ProductsPage/ContentProducts";
+import SubNavbar from "../components/SubNavbar";
 
 const ProductsPage = () => {
   return (
     <main className="bg-secondary/25 min-h-screen w-full">
-      <Navbar />
+      <SubNavbar />
       <ContentProducts />
     </main>
   );

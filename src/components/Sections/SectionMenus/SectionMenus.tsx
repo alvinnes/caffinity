@@ -1,11 +1,11 @@
 import { useState } from "react";
 import productCoffe, { ProductCoffe } from "../../../assets/datas/productCoffe";
 import { ArrowCircleUpRight } from "@phosphor-icons/react";
-import PrimaryButton from "../../UI/PrimaryButton";
 import SubTitle from "../../UI/SubTitle";
 import Title from "../../UI/Title";
 import ContentProductMenu from "./ContentProductMenu";
 import DecorationMenus from "./DecorationMenus";
+import { Link } from "react-router";
 
 const SectionMenus = () => {
   const [product, _setProduct] = useState<ProductCoffe[]>(productCoffe);
@@ -34,12 +34,12 @@ const SectionMenus = () => {
           <ContentProductMenu item={item} key={item.id} />
         ))}
       </div>
-      <PrimaryButton
-        icon={<ArrowCircleUpRight size={25} />}
-        customStyle="bg-coffe rounded-sm py-2.5 mt-15"
-        link="#"
-        text="Lihat Selengkapnya"
-      />
+      <button className="bg-coffe mt-10 rounded-sm px-4 py-2.5 text-white shadow-lg">
+        <Link to="/menu" className="flex items-center gap-2">
+          <ArrowCircleUpRight size={25} />
+          Lihat Selengkapnya
+        </Link>
+      </button>
       <DecorationMenus />
     </section>
   );

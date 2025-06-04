@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import Navbar from "../components/Navbar";
 import { ProductCoffe } from "../assets/datas/productCoffe";
 import ContentProductMenu from "../components/Sections/SectionMenus/ContentProductMenu";
 import useProductCart from "../hooks/useProductCart";
 import NotifDeleteWishlist from "../components/WishlistProducts/NotifDeleteWishlist";
 import BtnDelete from "../components/WishlistProducts/BtnDelete";
 import { Heart } from "@phosphor-icons/react";
+import SubNavbar from "../components/SubNavbar";
 
 const WishlistPage = () => {
   const wishlistProducts = useProductCart((state) => state.wishlistProducts);
@@ -21,7 +21,7 @@ const WishlistPage = () => {
 
   return (
     <main className="flex min-h-screen w-full justify-center">
-      <Navbar />
+      <SubNavbar />
       <section className="relative flex w-11/12 flex-col items-center justify-center py-20">
         <h2 className="mt-20 mb-10 w-full text-4xl font-bold text-nowrap text-slate-600 sm:mt-30 sm:w-11/12 sm:text-5xl">
           Product Wishlist

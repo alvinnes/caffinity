@@ -1,11 +1,10 @@
 import ContentCartProduct from "../components/CartProductPage/ContentCartProduct";
-import Navbar from "../components/Navbar";
+import SubNavbar from "../components/SubNavbar";
 
 const CartProductPage = () => {
-  
   return (
-    <main className="w-full h-screen bg-slate-100 flex justify-center items-center">
-      <Navbar />
+    <main className="flex h-screen w-full items-center justify-center bg-slate-100">
+      <SubNavbar />
       <ContentCartProduct />
     </main>
   );
