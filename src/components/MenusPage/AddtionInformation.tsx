@@ -7,7 +7,7 @@ interface AddtionInformationProps {
 
 const AddtionInformation = ({ product }: AddtionInformationProps) => {
   return (
-    <div className="flex w-xs flex-col gap-15">
+    <div className="mt-10 flex w-xs flex-col gap-14">
       <CardItem
         text="Bahan - bahan"
         color="sm:bg-secondary/80 bg-white"

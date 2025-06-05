@@ -25,7 +25,7 @@ const SubNavbar = () => {
     setQuantityWiselist(storedTotalQuantityWiselist);
   }, [setQuantityWiselist]);
   return (
-    <nav className="bg-coffe fixed top-2 left-1/2 z-999 flex w-11/12 -translate-x-1/2 items-center justify-between rounded-md px-[3%] py-6 text-white shadow-sm sm:w-10/12">
+    <nav className="from-coffe to-secondary fixed top-2 left-1/2 z-999 flex w-11/12 -translate-x-1/2 items-center justify-between rounded-md bg-linear-to-t px-[3%] py-6 text-white shadow-sm sm:w-10/12">
       <Link to={"/"}>
         <ArrowArcLeft size={25} />
       </Link>
@@ -34,7 +34,7 @@ const SubNavbar = () => {
           <div className="relative">
             <ShoppingCart className="size-6 sm:size-5" />
             <span
-              className={`${quantity == 0 && "hidden"} bg-secondary absolute -top-2 left-2 flex size-3 items-center justify-center rounded-full p-2.5 text-[0.8em] text-slate-600`}
+              className={`${quantity == 0 && "hidden"} bg-coffe absolute -top-2 left-2 flex size-3 items-center justify-center rounded-full p-2.5 text-[0.8em] text-white`}
             >
               {quantity}
             </span>
@@ -44,7 +44,7 @@ const SubNavbar = () => {
           <div className="relative">
             <Heart className="size-6 sm:size-5" />
             <span
-              className={`${quantityWiselist == 0 && "hidden"} bg-secondary absolute -top-2 left-2 flex size-3 items-center justify-center rounded-full p-2.5 text-[0.8em] text-slate-600`}
+              className={`${quantityWiselist == 0 && "hidden"} bg-coffe absolute -top-2 left-2 flex size-3 items-center justify-center rounded-full p-2.5 text-[0.8em] text-white`}
             >
               {quantityWiselist}
             </span>

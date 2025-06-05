@@ -7,8 +7,8 @@ interface DescriptionMenu {
 
 const DescriptionMenu = ({ product }: DescriptionMenu) => {
   return (
-    <div className="mt-28 flex w-full flex-col gap-8 sm:mt-0 sm:w-sm">
-      <h1 className="font-fair text-5xl leading-13 font-bold text-slate-600 drop-shadow-sm sm:text-7xl">
+    <div className="mt-28 mb-50 flex w-full flex-col gap-8 sm:mt-0 sm:mb-0 sm:w-sm">
+      <h1 className="font-fair text-5xl leading-13 font-bold text-slate-600 drop-shadow-sm sm:text-7xl sm:leading-18">
         {product.name}
       </h1>
       <p className="text-sm">{product.description}</p>
